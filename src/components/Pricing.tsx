@@ -163,7 +163,7 @@ export const Pricing: React.FC = () => {
 
               {/* Price Indicator */}
               <div className="space-y-1 py-4 border-y border-white/5">
-                <p className="text-xs text-gray-400 line-through">De R$ 47,00 por apenas</p>
+                <p className="text-xs text-gray-400 line-through">De R$ 47,99 por apenas</p>
                 
                 <div className="flex items-baseline gap-1">
                   <span className="text-xl font-bold text-white">R$</span>

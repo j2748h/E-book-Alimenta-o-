@@ -53,14 +53,6 @@ export const Testimonials: React.FC = () => {
 
               {/* Profile card footer */}
               <div className="mt-8 pt-6 border-t border-gray-50 flex items-center gap-3">
-                <img
-                  src={testimonial.avatarUrl}
-                  alt={testimonial.name}
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  className="w-10 h-10 rounded-full object-cover border-2 border-brand-primary flex-shrink-0"
-                  id={`testimonial-avatar-${testimonial.id}`}
-                />
                 <div>
                   <h4 className="font-display font-bold text-xs md:text-sm text-brand-dark leading-none">
                     {testimonial.name}
@@ -91,8 +83,9 @@ export const Testimonials: React.FC = () => {
             <p className="text-xl md:text-2xl font-display font-black text-brand-primary">7 dias</p>
             <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-0.5">Garantia Total</p>
           </div>
-          <div className="border-l border-gray-150">
-            <p className="text-xl md:text-2xl font-display font-black text-brand-primary">R$ 22,89</p>
+          <div className="border-l border-gray-150 flex flex-col justify-center items-center">
+            <span className="text-[10px] text-gray-400 line-through leading-none">R$ 47,99</span>
+            <p className="text-lg md:text-2.5xl font-display font-black text-brand-primary leading-tight">R$ 22,89</p>
             <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-0.5">Sem Taxas Ocultas</p>
           </div>
         </div>

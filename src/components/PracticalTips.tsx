@@ -1,6 +1,47 @@
 import React from "react";
 import { practicalTipsData } from "../data";
-import { CheckCircle, Eye, HelpCircle, LucideIcon } from "lucide-react";
+import { 
+  CheckCircle, 
+  Droplet, 
+  Utensils, 
+  Footprints, 
+  Moon, 
+  ClipboardList 
+} from "lucide-react";
+
+const getTipIcon = (id: string) => {
+  switch (id) {
+    case "water":
+      return <Droplet className="w-6 h-6 sm:w-7 sm:h-7 text-sky-600" id="tip-icon-water" />;
+    case "chew":
+      return <Utensils className="w-6 h-6 sm:w-7 sm:h-7 text-amber-600" id="tip-icon-chew" />;
+    case "movement":
+      return <Footprints className="w-6 h-6 sm:w-7 sm:h-7 text-emerald-600" id="tip-icon-movement" />;
+    case "sleep":
+      return <Moon className="w-6 h-6 sm:w-7 sm:h-7 text-indigo-600" id="tip-icon-sleep" />;
+    case "planning":
+      return <ClipboardList className="w-6 h-6 sm:w-7 sm:h-7 text-teal-600" id="tip-icon-planning" />;
+    default:
+      return <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-brand-primary" id="tip-icon-default" />;
+  }
+};
+
+const getTipBgClass = (id: string) => {
+  switch (id) {
+    case "water":
+      return "bg-sky-50 border-sky-100 text-sky-600";
+    case "chew":
+      return "bg-amber-50 border-amber-100 text-amber-600";
+    case "movement":
+      return "bg-emerald-50 border-emerald-100 text-emerald-600";
+    case "sleep":
+      return "bg-indigo-50 border-indigo-100 text-indigo-600";
+    case "planning":
+      return "bg-teal-50 border-teal-100 text-teal-600";
+    default:
+      return "bg-brand-tint border-brand-primary/10 text-brand-primary";
+  }
+};
 
 export const PracticalTips: React.FC = () => {
   return (
@@ -26,35 +67,30 @@ export const PracticalTips: React.FC = () => {
           {practicalTipsData.map((tip) => (
             <div
               key={tip.id}
-              className="group bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="group bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               id={`tip-card-${tip.id}`}
             >
-              {/* Photo top placeholder container */}
-              <div className="relative h-56 w-full overflow-hidden bg-gray-100">
-                <img
-                  src={tip.imageUrl}
-                  alt={tip.title}
-                  loading="lazy"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  id={`tip-image-${tip.id}`}
-                />
-                
-                {/* Floating Badge (Glassmorphism effect) */}
-                <span className="absolute top-4 left-4 inline-flex items-center gap-1 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-brand-dark font-display font-extrabold text-[11px] shadow-sm uppercase tracking-wider">
-                  <span className="mr-0.5">{tip.emoji}</span>
-                  <span>{tip.badge}</span>
-                </span>
-                
-                {/* Visual shade gradient overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
-                <div className="absolute bottom-3 left-4 text-white text-[10px] uppercase font-mono tracking-widest font-bold">
-                  Método Prático
+              {/* Miniature & Badge Section */}
+              <div className="flex gap-4 items-start mb-6">
+                <div 
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center flex-shrink-0 border transition-all duration-300 group-hover:scale-110 shadow-xs ${getTipBgClass(tip.id)}`}
+                  id={`tip-miniature-container-${tip.id}`}
+                >
+                  {getTipIcon(tip.id)}
+                </div>
+                <div className="flex flex-col gap-1.5 justify-center py-1">
+                  <span className="inline-flex items-center gap-1 self-start px-2.5 py-1 bg-brand-tint rounded-full text-brand-primary font-display font-extrabold text-[10px] sm:text-[11px] uppercase tracking-wider">
+                    <span className="mr-0.5">{tip.emoji}</span>
+                    <span>{tip.badge}</span>
+                  </span>
+                  <div className="text-[10px] uppercase font-mono tracking-widest text-gray-400 font-bold">
+                    Método Prático
+                  </div>
                 </div>
               </div>
 
               {/* Card body content */}
-              <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+              <div className="flex-1 flex flex-col justify-between">
                 <div>
                   <h3 className="font-display font-black text-lg text-brand-dark tracking-tight leading-snug group-hover:text-brand-primary transition-colors">
                     {tip.title}

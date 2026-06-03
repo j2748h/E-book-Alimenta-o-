@@ -20,7 +20,7 @@ export const PaymentProvider: React.FC<{ children: React.ReactNode }> = ({ child
     if (savedLink && savedLink !== "COLOQUE_AQUI_SEU_LINK_DE_PAGAMENTO" && savedLink.trim() !== "") {
       setPaymentLinkState(savedLink);
     } else {
-      setPaymentLinkState("https://p.hoopay.com.br/v/313034586501248");
+      setPaymentLinkState("https://dashboard.hoopay.com.br/product_affiliate/976c9ed7-1a56-4d4b-9802-29403d96d412");
     }
   }, []);
 

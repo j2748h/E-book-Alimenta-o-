@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
             <div className="hidden lg:flex flex-col items-end">
               <div className="flex items-center gap-1.5 text-xs text-brand-primary font-bold bg-brand-tint px-2.5 py-0.5 rounded-full select-none">
                 <Percent className="w-3.5 h-3.5 text-brand-primary" />
-                <span>R$ 24,11 economizados</span>
+                <span>R$ 25,10 economizados</span>
               </div>
             </div>
 
@@ -62,7 +62,10 @@ export const Header: React.FC = () => {
               id="header-buy-button"
             >
               <ShoppingCart className="w-4 h-4 text-brand-cream" />
-              <span>Garantir e-book • R$ 22,89</span>
+              <span className="flex items-center gap-1.5 flex-wrap">
+                <span>Garantir e-book • R$ 22,89</span>
+                <span className="line-through text-[10px] text-emerald-300 font-semibold opacity-90">R$ 47,99</span>
+              </span>
             </button>
           </div>
 

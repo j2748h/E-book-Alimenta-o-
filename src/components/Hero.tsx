@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
             {/* Super Highlight Badge */}
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-primary/10 rounded-full text-brand-primary text-xs font-bold leading-none mx-auto lg:mx-0 select-none">
               <Sparkles className="w-3.5 h-3.5 text-brand-accent fill-brand-accent animate-spin" />
-              <span>Oferta de Lançamento por apenas R$ 22,89</span>
+              <span>Oferta Especial: de <span className="line-through opacity-75">R$ 47,99</span> por apenas R$ 22,89</span>
             </div>
 
             {/* Title & E-book Identity */}
@@ -64,10 +64,16 @@ export const Hero: React.FC = () => {
                 <span>(1.240+ avaliações)</span>
               </div>
               <span className="text-gray-300">|</span>
-              <div className="flex items-center gap-1 text-emerald-600">
-                <Download className="w-4 h-4" />
-                <span>Download PDF Imediato</span>
-              </div>
+              <a
+                href="https://www.cssbuylatam.com/pt/home/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-brand-primary hover:text-brand-medium text-xs font-bold rounded-xl border border-emerald-100 transition-all active:scale-95 cursor-pointer shadow-xs"
+                id="link-preview-ebook"
+              >
+                <Download className="w-3.5 h-3.5 text-brand-primary" />
+                <span>Prévias do E-book</span>
+              </a>
             </div>
 
             {/* CTAs */}
@@ -77,7 +83,10 @@ export const Hero: React.FC = () => {
                 className="w-full sm:w-auto px-8 py-4 bg-brand-primary hover:bg-brand-medium text-white font-black rounded-2xl transition-all shadow-lg hover:shadow-brand-primary/30 active:scale-95 text-center flex items-center justify-center gap-2 group cursor-pointer"
                 id="hero-buy-now"
               >
-                <span>Garantir e-book por R$ 22,89</span>
+                <span className="flex items-center gap-2 flex-wrap justify-center">
+                  <span>Garantir e-book por R$ 22,89</span>
+                  <span className="line-through text-xs text-emerald-300 font-semibold opacity-85">R$ 47,99</span>
+                </span>
                 <span className="text-brand-accent font-bold group-hover:translate-x-1 transition-transform">→</span>
               </button>
 
@@ -148,13 +157,14 @@ export const Hero: React.FC = () => {
 
               {/* Float Badge: Gold Pricing tag */}
               <div className="absolute -bottom-6 -right-4 bg-brand-accent text-brand-dark font-display font-black shadow-lg rounded-2xl p-4 border-2 border-white transform rotate-3 select-none flex flex-col items-center justify-center">
-                <span className="text-[10px] text-brand-dark/80 tracking-widest uppercase font-bold leading-none">Por apenas</span>
+                <span className="text-[10px] text-brand-dark/75 line-through leading-none">De R$ 47,99</span>
+                <span className="text-[10px] text-brand-dark/95 tracking-wider uppercase font-bold leading-none mt-1">Por apenas</span>
                 <div className="flex items-baseline gap-0.5 mt-0.5">
                   <span className="text-xs font-extrabold">R$</span>
                   <span className="text-2xl font-black tracking-tight leading-none">22,89</span>
                 </div>
                 <span className="text-[9px] bg-brand-dark text-white font-bold px-1.5 py-0.5 rounded-md mt-1 leading-none uppercase">
-                  51% Desconto
+                  52% Desconto
                 </span>
               </div>
 

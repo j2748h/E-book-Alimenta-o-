@@ -83,7 +83,7 @@ export const Benefits: React.FC = () => {
               Pronto para economizar enquanto ganha saúde?
             </h4>
             <p className="text-xs text-emerald-100/80">
-              O investimento de R$ 22,89 se paga logo no primeiro carrinho de feira inteligente!
+              O investimento promocional de apenas <strong className="text-white">R$ 22,89</strong> (de <span className="line-through">R$ 47,99</span>) se paga logo no primeiro carrinho de feira inteligente!
             </p>
           </div>
 

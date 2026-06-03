@@ -410,8 +410,10 @@ export const CheckoutSimulator: React.FC = () => {
                       Para que as pessoas possam comprar o seu e-book de verdade e você receber os pagamentos:
                     </p>
                     <ol className="list-decimal pl-4 space-y-1 text-gray-600 text-[11px] font-medium">
-                      <li>Crie um produto na Hotmart, Kiwify, Eduzz, etc.</li>
-                      <li>Copie o link da sua página de pagamento em sua plataforma favorita.</li>
+                      <li>
+                        Torne-se um afiliado oficial na plataforma Hoopay e ganhe <strong className="text-brand-primary">47% de comissão</strong> por venda clicando <a href="https://dashboard.hoopay.com.br/product_affiliate/976c9ed7-1a56-4d4b-9802-29403d96d412" target="_blank" rel="noopener noreferrer" className="text-amber-600 hover:underline font-bold">aqui</a>.
+                      </li>
+                      <li>Copie o link de afiliação ou sua própria página de checkout.</li>
                       <li>
                         Cole o link na <strong className="text-brand-primary">Barra de Configuração Superior do Site</strong> e clique em salvar.
                       </li>

@@ -43,10 +43,13 @@ export const StickyButton: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex items-baseline gap-0.5 mt-0.5">
-              <span className="text-[10px] font-bold text-gray-500">R$</span>
-              <span className="text-xl font-display font-black text-brand-dark tracking-tight">22,89</span>
-              <span className="text-[9px] text-[#22c55e] font-bold ml-1">51% OFF</span>
+            <div className="flex flex-col mt-0.5">
+              <span className="text-[9px] text-gray-400 line-through leading-none">R$ 47,99</span>
+              <div className="flex items-baseline gap-0.5 leading-none mt-0.5">
+                <span className="text-[10px] font-bold text-gray-500">R$</span>
+                <span className="text-xl font-display font-black text-brand-dark tracking-tight">22,89</span>
+                <span className="text-[9px] text-emerald-600 font-extrabold ml-1 font-sans">52% OFF</span>
+              </div>
             </div>
           </div>
 
