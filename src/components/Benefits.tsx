@@ -1,6 +1,7 @@
 import React from "react";
 import { benefitsData } from "../data";
 import { Apple, CalendarDays, Zap, Moon, Smile, DollarSign, HeartHandshake, CheckCircle2 } from "lucide-react";
+import { motion } from "motion/react";
 
 export const Benefits: React.FC = () => {
   // Helper to map string dynamic names to components safely
@@ -42,11 +43,15 @@ export const Benefits: React.FC = () => {
           </p>
         </div>
 
-        {/* Bento Grid layout */}
+        {/* Bento Grid layout with stagger */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {benefitsData.map((benefit, index) => (
-            <div
+            <motion.div
               key={benefit.id}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               className="group relative bg-brand-cream/30 hover:bg-brand-tint/40 border border-emerald-900/5 hover:border-brand-primary/20 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-brand-primary/5 flex flex-col justify-between"
               id={`benefit-${benefit.id}`}
             >
@@ -70,7 +75,7 @@ export const Benefits: React.FC = () => {
                 <CheckCircle2 className="w-4 h-4 text-brand-primary stroke-2" />
                 <span>Pronto para praticar</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

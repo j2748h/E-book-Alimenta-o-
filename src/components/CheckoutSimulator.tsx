@@ -9,6 +9,7 @@ import { usePayment } from "./PaymentContext";
 export const CheckoutSimulator: React.FC = () => {
   const { isSimulatorOpen, setIsSimulatorOpen, paymentLink, setPaymentLink } = usePayment();
   const [paymentMethod, setPaymentMethod] = useState<"pix" | "card">("pix");
+  const [error, setError] = useState<string | null>(null);
   
   // States for Credit Card form
   const [cardNumber, setCardNumber] = useState("");
@@ -31,8 +32,9 @@ export const CheckoutSimulator: React.FC = () => {
 
   const handleCardSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
     if (!cardNumber || !cardName || !cardExpiry || !cardCvv) {
-      alert("Por favor, preencha todos os campos do cartão para simular.");
+      setError("Por favor, preencha todos os campos do cartão para simular.");
       return;
     }
     setIsSubmitting(true);
@@ -46,22 +48,22 @@ export const CheckoutSimulator: React.FC = () => {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-xs">
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
-          className="relative w-full max-w-2xl overflow-hidden bg-white shadow-2xl rounded-3xl text-gray-800"
+          initial={{ opacity: 0, scale: 0.96, y: 15 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.96, y: 15 }}
+          transition={{ duration: 0.22, ease: "easeOut" }}
+          className="relative w-full max-w-2xl overflow-hidden bg-white shadow-2xl rounded-2xl sm:rounded-3xl text-gray-800 flex flex-col max-h-[92vh] sm:max-h-[88vh]"
           id="checkout-modal-container"
         >
           {/* Top banner / Info bar */}
-          <div className="bg-brand-dark px-6 py-3 text-white text-xs flex flex-wrap items-center justify-between gap-2 border-b border-brand-primary/20">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-2 w-2 rounded-full bg-brand-light animate-pulse"></span>
-              <span className="font-medium text-emerald-300">Modo de Simulação Ativo</span>
+          <div className="bg-brand-dark px-4 sm:px-6 py-2.5 sm:py-3 text-white text-xs flex flex-wrap items-center justify-between gap-1 sm:gap-2 border-b border-brand-primary/20">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="inline-flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="font-semibold text-emerald-300">Modo de Simulação Ativo</span>
             </div>
-            <p className="text-[11px] text-emerald-100/90 font-mono">
+            <p className="text-[10px] sm:text-[11px] text-emerald-100/90 font-mono truncate max-w-[200px] sm:max-w-xs">
               Link Atual: {paymentLink.length > 30 ? `${paymentLink.slice(0, 30)}...` : paymentLink}
             </p>
           </div>
@@ -71,15 +73,16 @@ export const CheckoutSimulator: React.FC = () => {
             onClick={() => {
               setIsSimulatorOpen(false);
               setPurchaseSuccess(false);
+              setError(null);
             }} 
-            className="absolute top-14 right-4 p-2 transition-colors rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 z-10"
+            className="absolute top-12 sm:top-14 right-3 sm:right-4 p-1.5 sm:p-2 transition-colors rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 z-10"
             aria-label="Fechar checkout"
             id="close-checkout"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 max-h-[85vh] overflow-y-auto">
+          <div className="grid grid-cols-1 md:grid-cols-5 overflow-y-auto flex-1">
             {/* Left side: Plan & Value Summary */}
             <div className="md:col-span-2 bg-brand-cream/60 p-6 md:p-8 flex flex-col justify-between border-r border-gray-100">
               <div>
@@ -152,10 +155,10 @@ export const CheckoutSimulator: React.FC = () => {
                     <div className="grid grid-cols-2 gap-2 p-1 bg-gray-100 rounded-xl mb-6">
                       <button
                         type="button"
-                        onClick={() => setPaymentMethod("pix")}
-                        className={`py-2 px-3 rounded-lg text-xs font-semibold tracking-tight transition-all flex items-center justify-center gap-1.5 ${
+                        onClick={() => { setPaymentMethod("pix"); setError(null); }}
+                        className={`py-2 px-3 rounded-lg text-xs font-semibold tracking-tight transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                           paymentMethod === "pix"
-                            ? "bg-white text-brand-dark shadow-sm"
+                            ? "bg-white text-brand-dark shadow-xs"
                             : "text-gray-500 hover:text-brand-dark"
                         }`}
                         id="tab-pix"
@@ -165,10 +168,10 @@ export const CheckoutSimulator: React.FC = () => {
                       </button>
                       <button
                         type="button"
-                        onClick={() => setPaymentMethod("card")}
-                        className={`py-2 px-3 rounded-lg text-xs font-semibold tracking-tight transition-all flex items-center justify-center gap-1.5 ${
+                        onClick={() => { setPaymentMethod("card"); setError(null); }}
+                        className={`py-2 px-3 rounded-lg text-xs font-semibold tracking-tight transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
                           paymentMethod === "card"
-                            ? "bg-white text-brand-dark shadow-sm"
+                            ? "bg-white text-brand-dark shadow-xs"
                             : "text-gray-500 hover:text-brand-dark"
                         }`}
                         id="tab-card"
@@ -269,6 +272,16 @@ export const CheckoutSimulator: React.FC = () => {
                         className="space-y-4"
                         id="card-payment-form"
                       >
+                        {error && (
+                          <motion.div 
+                            initial={{ scale: 0.95, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            className="bg-red-50 text-red-700 border border-red-100 p-3 rounded-xl text-[11px] flex items-start gap-2"
+                          >
+                            <AlertCircle className="w-3.5 h-3.5 text-red-500 mt-0.5 flex-shrink-0" />
+                            <span>{error}</span>
+                          </motion.div>
+                        )}
                         <div className="space-y-3">
                           <div>
                             <label className="block text-[10px] font-bold text-gray-500 uppercase mb-1">

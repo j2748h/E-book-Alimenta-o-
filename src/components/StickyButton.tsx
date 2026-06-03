@@ -29,7 +29,7 @@ export const StickyButton: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 80, opacity: 0 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-gray-150 p-4 shadow-2xl z-40 md:hidden flex items-center justify-between gap-4"
+          className="fixed bottom-0 inset-x-0 bg-white/90 backdrop-blur-md border-t border-gray-150 py-2.5 px-4 shadow-2xl z-40 md:hidden flex items-center justify-between gap-4"
           id="mobile-sticky-bar"
         >
           {/* Left: Product & Price mini-badge */}

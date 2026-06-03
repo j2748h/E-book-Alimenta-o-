@@ -8,6 +8,7 @@ import {
   Moon, 
   ClipboardList 
 } from "lucide-react";
+import { motion } from "motion/react";
 
 const getTipIcon = (id: string) => {
   switch (id) {
@@ -64,9 +65,13 @@ export const PracticalTips: React.FC = () => {
 
         {/* Visual Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {practicalTipsData.map((tip) => (
-            <div
+          {practicalTipsData.map((tip, index) => (
+            <motion.div
               key={tip.id}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: index * 0.08 }}
               className="group bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               id={`tip-card-${tip.id}`}
             >
@@ -110,7 +115,7 @@ export const PracticalTips: React.FC = () => {
                 </div>
               </div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 
