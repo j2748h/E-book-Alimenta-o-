@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Alimentação Inteligentev2",
+  "description": "Página de vendas moderna, bonita e responsiva para o e-book Alimentação Inteligente: O Guia Prático Para Emagrecer Gastando Pouco.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
