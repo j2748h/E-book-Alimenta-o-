@@ -30,27 +30,32 @@ export const Header: React.FC = () => {
 
           {/* Navigation Links for Desktop */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
-            <a href="#beneficios" className="hover:text-brand-primary transition-colors py-2">
+            <a href="#beneficios" className="hover:text-brand-primary transition-colors py-2 relative group uppercase tracking-wider text-[11px] font-black">
               Benefícios
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#conteudo" className="hover:text-brand-primary transition-colors py-2">
+            <a href="#conteudo" className="hover:text-brand-primary transition-colors py-2 relative group uppercase tracking-wider text-[11px] font-black">
               Conteúdo
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#habitos" className="hover:text-brand-primary transition-colors py-2">
+            <a href="#habitos" className="hover:text-brand-primary transition-colors py-2 relative group uppercase tracking-wider text-[11px] font-black">
               Dicas Práticas
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#depoimentos" className="hover:text-brand-primary transition-colors py-2">
+            <a href="#depoimentos" className="hover:text-brand-primary transition-colors py-2 relative group uppercase tracking-wider text-[11px] font-black">
               Depoimentos
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#proposito" className="hover:text-brand-primary transition-colors py-2">
+            <a href="#proposito" className="hover:text-brand-primary transition-colors py-2 relative group uppercase tracking-wider text-[11px] font-black">
               História
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
 
           {/* Action Button */}
           <div className="flex items-center gap-4">
             <div className="hidden lg:flex flex-col items-end">
-              <div className="flex items-center gap-1.5 text-xs text-brand-primary font-bold bg-brand-tint px-2.5 py-0.5 rounded-full select-none">
+              <div className="flex items-center gap-1.5 text-xs text-[#0c6946] font-extrabold bg-[#eefaf4] px-3 py-1 rounded-full select-none border border-brand-primary/10 animate-pulse">
                 <Percent className="w-3.5 h-3.5 text-brand-primary" />
                 <span>R$ 25,10 economizados</span>
               </div>
@@ -58,13 +63,13 @@ export const Header: React.FC = () => {
 
             <button
               onClick={triggerPurchase}
-              className="px-4 py-2 bg-brand-primary hover:bg-brand-medium text-white text-xs md:text-sm font-bold rounded-xl transition-all shadow-md hover:shadow-brand-primary/20 active:scale-95 flex items-center gap-2 cursor-pointer"
+              className="px-4 py-2.5 bg-[#0a5236] hover:bg-brand-primary text-white text-xs md:text-sm font-black rounded-xl transition-all shadow-md hover:shadow-brand-primary/20 active:scale-95 flex items-center gap-2 cursor-pointer uppercase tracking-wider"
               id="header-buy-button"
             >
               <ShoppingCart className="w-4 h-4 text-brand-cream" />
-              <span className="flex items-center gap-1.5 flex-wrap">
+              <span className="flex items-center gap-2 flex-wrap">
                 <span>Garantir e-book • R$ 22,89</span>
-                <span className="line-through text-[10px] text-emerald-300 font-semibold opacity-90">R$ 47,99</span>
+                <span className="line-through text-[10px] text-emerald-300 font-extrabold opacity-95">R$ 47,99</span>
               </span>
             </button>
           </div>

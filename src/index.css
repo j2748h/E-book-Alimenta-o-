@@ -5,13 +5,13 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: "Outfit", sans-serif;
   
-  --color-brand-dark: #0f2e22; /* Dark forest green */
-  --color-brand-medium: #164e38; /* Medium/Rich green */
-  --color-brand-primary: #107c52; /* Healthy vibrant green */
-  --color-brand-light: #22c55e; /* Crisp light green */
-  --color-brand-accent: #e2b43b; /* Warm honey gold */
-  --color-brand-cream: #f4f8f6; /* Soft green-tinted white */
-  --color-brand-tint: #ecfdf5; /* Cozy background shade */
+  --color-brand-dark: #061e14; /* Deeper Emerald imperial forest green */
+  --color-brand-medium: #0c3c28; /* Polished deep majestic green */
+  --color-brand-primary: #107e54; /* Brilliant healthy vibrant jade green */
+  --color-brand-light: #10b981; /* High-luxury mint gold complementary emerald */
+  --color-brand-accent: #e5b22d; /* Refined honey sun gold */
+  --color-brand-cream: #f6fbf8; /* Super clean light morning fog mist white */
+  --color-brand-tint: #ecfdf3; /* Ultra cozy soft luxury background gold/mint shade */
 }
 
 html {

@@ -18,115 +18,122 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-brand-cream/40 pt-10 pb-16 md:pt-16 md:pb-24 border-b border-gray-100" id="hero">
-      {/* Decorative gradient glowing bubbles */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#edf6f1] via-brand-cream/40 to-white pt-12 pb-16 md:pt-20 md:pb-28 border-b border-gray-100" id="hero">
+      {/* Luxurious glowing decorative elements */}
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-primary/8 rounded-full blur-[130px] pointer-events-none animate-pulse duration-[6s]"></div>
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-brand-accent/8 rounded-full blur-[110px] pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-brand-light/4 rounded-full blur-[90px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Brand, Title, Story & Action */}
           <motion.div 
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="lg:col-span-7 space-y-5 md:space-y-8 text-center lg:text-left"
+            transition={{ duration: 0.65, ease: "easeOut" }}
+            className="lg:col-span-7 space-y-6 md:space-y-10 text-center lg:text-left"
           >
             
-            {/* Super Highlight Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-primary/10 rounded-full text-brand-primary text-xs font-bold leading-none mx-auto lg:mx-0 select-none">
-              <Sparkles className="w-3.5 h-3.5 text-brand-accent fill-brand-accent animate-spin" />
+            {/* Super Highlight Badge with highly-polished design */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-primary/10 hover:bg-brand-primary/15 border border-brand-primary/20 rounded-full text-brand-primary text-xs font-extrabold leading-none mx-auto lg:mx-0 select-none transition-all shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-brand-accent fill-brand-accent animate-bounce" />
               <span>Oferta Especial: de <span className="line-through opacity-75">R$ 47,99</span> por apenas R$ 22,89</span>
             </div>
 
-            {/* Title & E-book Identity */}
-            <div className="space-y-3">
-              <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-brand-dark tracking-tight leading-none">
-                Alimentação <span className="text-brand-primary relative inline-block">Inteligente</span>
+            {/* Title & E-book Identity with elegant luxury typography */}
+            <div className="space-y-4">
+              <h1 className="font-display font-black text-4xl sm:text-5xl lg:text-6.5xl text-brand-dark tracking-tight leading-none">
+                Alimentação <span className="text-brand-primary relative inline-block">Inteligente
+                  <span className="absolute -bottom-2 inset-x-0 h-1.5 bg-brand-accent rounded-full opacity-60"></span>
+                </span>
               </h1>
-              <p className="font-display text-base sm:text-xl font-bold text-brand-medium/90 max-w-xl mx-auto lg:mx-0 leading-snug">
+              <p className="font-display text-lg sm:text-2xl font-extrabold text-brand-medium/90 max-w-xl mx-auto lg:mx-0 leading-tight">
                 Mais do que um e-book, um projeto criado por um filho que queria ajudar sua família.
               </p>
             </div>
 
             {/* Story-centered Text */}
-            <p className="text-xs sm:text-sm md:text-base text-gray-650 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal">
+            <p className="text-sm sm:text-base text-gray-650 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal opacity-95">
               Este guia nasceu para mostrar que viver com mais saúde não precisa ser caro. 
               Com orientações simples, práticas e acessíveis, ele ajuda famílias brasileiras a 
               melhorarem a alimentação, criarem hábitos saudáveis e cuidarem melhor da rotina.
             </p>
 
-            {/* Real Proof mini ribbon */}
-            <div className="flex flex-wrap justify-center lg:justify-start items-center gap-3 md:gap-4 text-xs text-gray-500 font-medium my-4">
-              <div className="flex items-center gap-1">
+            {/* Real Proof mini ribbon with polished layout */}
+            <div className="flex flex-wrap justify-center lg:justify-start items-center gap-3 md:gap-5 text-xs text-gray-500 font-semibold my-4">
+              <div className="flex items-center gap-2 bg-white/70 backdrop-blur-xs py-1.5 px-3 rounded-full border border-gray-100 shadow-2xs">
                 <div className="flex text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                  {[...Array(3)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 fill-brand-accent text-brand-accent" />
+                  ))}
+                  {[...Array(2)].map((_, i) => (
+                    <Star key={i + 3} className="w-3.5 h-3.5 text-gray-300" />
                   ))}
                 </div>
-                <span className="font-bold text-gray-700">4.9/5</span>
-                <span className="text-[11px]">(1.240+ avaliações)</span>
+                <span className="font-black text-brand-dark">3,5</span>
+                <span className="text-gray-400 font-medium">(21+ avaliações)</span>
               </div>
               <span className="text-gray-300 hidden sm:inline">|</span>
               <a
                 href="https://www.cssbuylatam.com/pt/home/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-brand-primary hover:text-brand-medium text-xs font-bold rounded-xl border border-emerald-100 transition-all active:scale-95 cursor-pointer shadow-xs"
+                className="inline-flex items-center gap-2 px-3.5 py-2 bg-emerald-50 hover:bg-[#d1fae5] text-[#065f46] hover:text-brand-dark text-xs font-extrabold rounded-2xl border border-emerald-100 shadow-sm transition-all active:scale-95 cursor-pointer"
                 id="link-preview-ebook"
               >
-                <Download className="w-3.5 h-3.5 text-brand-primary" />
+                <Download className="w-4 h-4 text-brand-primary" />
                 <span>Prévias do E-book</span>
               </a>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            {/* CTAs with highly interactive premium feel */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5">
               <button
                 onClick={triggerPurchase}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-brand-primary hover:bg-brand-medium text-white font-black rounded-2xl transition-all shadow-lg hover:shadow-brand-primary/30 active:scale-95 text-center flex items-center justify-center gap-2 group cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 sm:py-5 bg-brand-primary hover:bg-[#0c6946] text-white font-black rounded-2xl transition-all shadow-[0_12px_24px_-8px_rgba(16,126,84,0.45)] hover:shadow-[0_16px_32px_-6px_rgba(16,126,84,0.6)] active:scale-97 text-center flex items-center justify-center gap-3.5 group cursor-pointer text-sm sm:text-base relative overflow-hidden"
                 id="hero-buy-now"
               >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
                 <span className="flex items-center gap-2 flex-wrap justify-center">
                   <span>Garantir e-book por R$ 22,89</span>
-                  <span className="line-through text-xs text-emerald-300 font-semibold opacity-85 text-[10px] sm:text-xs">R$ 47,99</span>
+                  <span className="line-through text-xs text-emerald-250 font-bold opacity-80 text-[10px] sm:text-xs">R$ 47,99</span>
                 </span>
-                <span className="text-brand-accent font-bold group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-brand-accent font-black group-hover:translate-x-1.5 transition-transform text-lg">→</span>
               </button>
 
               <a
                 href="#beneficios"
                 onClick={handleScrollToBenefits}
-                className="w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 bg-white hover:bg-gray-50 text-brand-dark border border-gray-200 font-bold rounded-2xl transition-all shadow-xs text-center flex items-center justify-center gap-2 active:scale-95 whitespace-nowrap"
+                className="w-full sm:w-auto px-6 py-4 sm:py-5 bg-white hover:bg-gray-50 text-brand-dark border border-gray-200/90 hover:border-gray-300 font-extrabold rounded-2xl transition-all shadow-xs hover:shadow-sm text-center flex items-center justify-center gap-2 active:scale-95 whitespace-nowrap text-sm cursor-pointer group"
                 id="hero-scroll-benefits"
               >
                 <span>Quero conhecer o e-book</span>
-                <ArrowDown className="w-4 h-4 text-gray-400 group-hover:translate-y-1 transition-transform" />
+                <ArrowDown className="w-4 h-4 text-gray-400 group-hover:translate-y-1.5 transition-all duration-300" />
               </a>
             </div>
 
             {/* Bullet points mapping */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 pt-4 border-t border-gray-200/50">
-              <div className="flex items-center gap-2 text-left bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs">
-                <span className="text-lg">💰</span>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-gray-200/60">
+              <div className="flex items-center gap-3 text-left bg-white/80 backdrop-blur-xs p-3.5 rounded-2xl border border-gray-100 shadow-2xs hover:shadow-xs transition-shadow">
+                <span className="text-2xl bg-amber-50 p-1.5 rounded-xl">💰</span>
                 <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-brand-dark leading-none">Super Econômico</h4>
-                  <p className="text-[9px] sm:text-[10px] text-gray-500 mt-0.5">Substitutos baratos</p>
+                  <h4 className="text-xs sm:text-sm font-black text-brand-dark leading-none">Super Econômico</h4>
+                  <p className="text-[10px] sm:text-xs text-gray-500 mt-1 font-medium">Substitutos baratos</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-left bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs">
-                <span className="text-lg">🏡</span>
+              <div className="flex items-center gap-3 text-left bg-white/80 backdrop-blur-xs p-3.5 rounded-2xl border border-gray-100 shadow-2xs hover:shadow-xs transition-shadow">
+                <span className="text-2xl bg-emerald-50 p-1.5 rounded-xl">🏡</span>
                 <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-brand-dark leading-none">Higiene & Treino</h4>
-                  <p className="text-[9px] sm:text-[10px] text-gray-500 mt-0.5">Práticas em casa</p>
+                  <h4 className="text-xs sm:text-sm font-black text-brand-dark leading-none">Higiene & Treino</h4>
+                  <p className="text-[10px] sm:text-xs text-gray-500 mt-1 font-medium">Práticas em casa</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-left col-span-2 md:col-span-1 bg-white p-2.5 rounded-xl border border-gray-100 shadow-xs">
-                <span className="text-lg">🚀</span>
+              <div className="flex items-center gap-3 text-left col-span-2 md:col-span-1 bg-white/80 backdrop-blur-xs p-3.5 rounded-2xl border border-gray-100 shadow-2xs hover:shadow-xs transition-shadow">
+                <span className="text-2xl bg-teal-50 p-1.5 rounded-xl">🚀</span>
                 <div>
-                  <h4 className="text-[11px] sm:text-xs font-bold text-brand-dark leading-none">Plano 30 Dias</h4>
-                  <p className="text-[9px] sm:text-[10px] text-gray-500 mt-0.5">Pequenas vitórias</p>
+                  <h4 className="text-xs sm:text-sm font-black text-brand-dark leading-none">Plano 30 Dias</h4>
+                  <p className="text-[10px] sm:text-xs text-gray-500 mt-1 font-medium">Pequenas vitórias</p>
                 </div>
               </div>
             </div>
