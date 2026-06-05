@@ -239,16 +239,17 @@ export const Pricing: React.FC = () => {
 
             {/* Main Checkout triggering Button */}
             <div className="mt-8 pt-4 space-y-4">
-              <button
-                type="button"
-                onClick={triggerPurchase}
-                className="w-full bg-brand-accent hover:bg-yellow-400 text-brand-dark py-4 sm:py-5 px-6 rounded-2xl text-sm sm:text-base font-black transition-all shadow-lg hover:shadow-brand-accent/20 active:scale-97 flex items-center justify-center gap-2 group cursor-pointer uppercase tracking-wider relative overflow-hidden"
+              <a
+                href="https://p.hoopay.com.br/v/313034586501248"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-brand-accent hover:bg-yellow-400 text-brand-dark py-4 sm:py-5 px-6 rounded-2xl text-sm sm:text-base font-black transition-all shadow-lg hover:shadow-brand-accent/20 active:scale-97 flex items-center justify-center gap-2 group cursor-pointer uppercase tracking-wider relative overflow-hidden text-center"
                 id="pricing-main-buy-button"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
                 <span>Garantir meu e-book agora</span>
                 <ArrowRight className="w-5 h-5 text-brand-dark group-hover:translate-x-1.5 transition-transform stroke-3" />
-              </button>
+              </a>
 
               <div className="flex items-center justify-center gap-2.5 text-[10px] text-gray-450 select-none">
                 <span className="flex items-center gap-1 text-emerald-400">

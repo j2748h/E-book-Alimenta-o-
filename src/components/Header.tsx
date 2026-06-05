@@ -61,17 +61,19 @@ export const Header: React.FC = () => {
               </div>
             </div>
 
-            <button
-              onClick={triggerPurchase}
-              className="px-4 py-2.5 bg-[#0a5236] hover:bg-brand-primary text-white text-xs md:text-sm font-black rounded-xl transition-all shadow-md hover:shadow-brand-primary/20 active:scale-95 flex items-center gap-2 cursor-pointer uppercase tracking-wider"
+            <a
+              href="https://p.hoopay.com.br/v/313034586501248"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 bg-[#0a5236] hover:bg-brand-primary text-white text-xs md:text-sm font-black rounded-xl transition-all shadow-md hover:shadow-brand-primary/20 active:scale-95 flex items-center justify-center gap-2 cursor-pointer uppercase tracking-wider text-center"
               id="header-buy-button"
             >
               <ShoppingCart className="w-4 h-4 text-brand-cream" />
-              <span className="flex items-center gap-2 flex-wrap">
+              <span className="flex items-center gap-2 flex-wrap justify-center">
                 <span>Garantir e-book • R$ 22,89</span>
                 <span className="line-through text-[10px] text-emerald-300 font-extrabold opacity-95">R$ 47,99</span>
               </span>
-            </button>
+            </a>
           </div>
 
         </div>

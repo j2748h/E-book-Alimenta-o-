@@ -53,16 +53,17 @@ export const StickyButton: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Trigger Purchase Button */}
-          <button
-            type="button"
-            onClick={triggerPurchase}
-            className="flex-1 bg-brand-primary active:bg-brand-medium text-white px-5 py-3 rounded-xl text-xs font-black tracking-tight transition-all flex items-center justify-center gap-1.5 shadow-md shadow-brand-primary/20 cursor-pointer"
+          {/* Right: Direct Hoopay Purchase Button */}
+          <a
+            href="https://p.hoopay.com.br/v/313034586501248"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 bg-brand-primary active:bg-brand-medium text-white px-5 py-3 rounded-xl text-xs font-black tracking-tight transition-all flex items-center justify-center gap-1.5 shadow-md shadow-brand-primary/20 cursor-pointer text-center"
             id="sticky-mobile-buy-button"
           >
             <ShoppingCart className="w-3.5 h-3.5 text-brand-cream" />
             <span>Comprar e-book</span>
-          </button>
+          </a>
         </motion.div>
       )}
     </AnimatePresence>

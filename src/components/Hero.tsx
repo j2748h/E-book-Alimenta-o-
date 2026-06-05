@@ -92,8 +92,10 @@ export const Hero: React.FC = () => {
 
             {/* CTAs with highly interactive premium feel */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-5">
-              <button
-                onClick={triggerPurchase}
+              <a
+                href="https://p.hoopay.com.br/v/313034586501248"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 sm:py-5 bg-brand-primary hover:bg-[#0c6946] text-white font-black rounded-2xl transition-all shadow-[0_12px_24px_-8px_rgba(16,126,84,0.45)] hover:shadow-[0_16px_32px_-6px_rgba(16,126,84,0.6)] active:scale-97 text-center flex items-center justify-center gap-3.5 group cursor-pointer text-sm sm:text-base relative overflow-hidden"
                 id="hero-buy-now"
               >
@@ -103,7 +105,7 @@ export const Hero: React.FC = () => {
                   <span className="line-through text-xs text-emerald-250 font-bold opacity-80 text-[10px] sm:text-xs">R$ 47,99</span>
                 </span>
                 <span className="text-brand-accent font-black group-hover:translate-x-1.5 transition-transform text-lg">→</span>
-              </button>
+              </a>
 
               <a
                 href="#beneficios"
