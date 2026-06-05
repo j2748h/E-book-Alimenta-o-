@@ -9,6 +9,7 @@ import { PaymentToolbar } from "./components/PaymentToolbar";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Benefits } from "./components/Benefits";
+import { TargetAudience } from "./components/TargetAudience";
 import { BookInside } from "./components/BookInside";
 import { PracticalTips } from "./components/PracticalTips";
 import { Testimonials } from "./components/Testimonials";
@@ -38,6 +39,9 @@ export default function App() {
 
             {/* Sec 2: Key Value Benefits */}
             <Benefits />
+
+            {/* Sec 2.5: Who is this guide for (high-conversion section) */}
+            <TargetAudience />
 
             {/* Sec 3: Content Index Details */}
             <BookInside />
