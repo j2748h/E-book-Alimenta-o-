@@ -12,6 +12,7 @@ import { Benefits } from "./components/Benefits";
 import { BookInside } from "./components/BookInside";
 import { PracticalTips } from "./components/PracticalTips";
 import { Testimonials } from "./components/Testimonials";
+import { WhatYouReceive } from "./components/WhatYouReceive";
 import { Story } from "./components/Story";
 import { Pricing } from "./components/Pricing";
 import { Footer } from "./components/Footer";
@@ -46,6 +47,9 @@ export default function App() {
 
             {/* Sec 5: Client Reviews & Social proof */}
             <Testimonials />
+
+            {/* Sec 5.5: Deliverology breakdown of what reader receives */}
+            <WhatYouReceive />
 
             {/* Sec 6: Backstory and Family Purpose */}
             <Story />
