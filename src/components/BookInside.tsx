@@ -122,12 +122,10 @@ export const BookInside: React.FC = () => {
               
               <div className="text-xs text-emerald-100/80 leading-relaxed space-y-3 font-normal">
                 <p>
-                  Não acreditamos em fórmulas prontas ou receitas com ingredientes importados de nomes difíceis. 
-                  Pesquisamos intensamente a realidade econômica das famílias brasileiras para projetar uma 
-                  <strong> reeducação prática</strong> baseada em alimentos populares de alto teor nutritivo.
+                  Este guia não foi escrito por acadêmicos distantes da realidade ou influenciadores ricos. Ele foi construído no fogo cruzado da necessidade real: criado por quem <strong>pesava 158 kg</strong>, que não tinha dinheiro para nutricionistas de grife ou produtos fit importados.
                 </p>
                 <p>
-                  Unindo reeducação alimentar, rotinas físicas de 15 minutos sem equipamentos e higiene psicológica (sono e ansiedade), você se liberta do cansaço crônico e economiza mensalmente.
+                  Cada dica, combinação de alimentos baratos de feira e estratégias de saciedade foram testadas exaustivamente na própria cozinha, trazendo resultados reais na perda de peso do autor e na melhora drástica de exames médicos de seus pais.
                 </p>
               </div>
 

@@ -49,15 +49,15 @@ export const Hero: React.FC = () => {
                 </span>
               </h1>
               <p className="font-display text-lg sm:text-2xl font-extrabold text-brand-medium/90 max-w-xl mx-auto lg:mx-0 leading-tight">
-                Mais do que um e-book, um projeto criado por um filho que queria ajudar sua família.
+                Mais do que um e-book, o método real de quem saiu dos 158 kg e ajudou a salvar a saúde dos seus pais gastando muito pouco.
               </p>
             </div>
 
             {/* Story-centered Text */}
             <p className="text-sm sm:text-base text-gray-650 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans font-normal opacity-95">
-              Este guia nasceu para mostrar que viver com mais saúde não precisa ser caro. 
-              Com orientações simples, práticas e acessíveis, ele ajuda famílias brasileiras a 
-              melhorarem a alimentação, criarem hábitos saudáveis e cuidarem melhor da rotina.
+              Este guia nasceu para provar que a reeducação alimentar é viável para qualquer bolso. 
+              Sem produtos importados ou frescuras: apenas o cronograma prático, barato e real 
+              que usei para mudar minha vida e dar mais anos de vida com saúde aos meus pais.
             </p>
 
             {/* Real Proof mini ribbon with polished layout */}
