@@ -11,8 +11,13 @@ export const BookInside: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-brand-cream/20 to-[#f2faf5] border-y border-gray-100" id="conteudo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-brand-cream/30 to-[#e9f5ee] overflow-hidden" id="conteudo">
+      {/* Editorial aesthetic lines representing a notebook outline */}
+      <div className="absolute inset-y-0 left-10 md:left-24 w-px border-l border-dashed border-emerald-500/10 pointer-events-none"></div>
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 left-1/3 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">

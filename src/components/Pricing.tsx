@@ -127,9 +127,14 @@ export const Pricing: React.FC = () => {
                 </div>
               </div>
 
-              <p className="text-[10px] text-gray-400 text-center md:text-left mt-4 leading-relaxed font-medium">
-                💡 Nota: Mais de 89% dos leitores relatam recuperar o valor do e-book inteiramente em sua primeira ida à feira semanal aplicando o cronograma!
-              </p>
+              <div className="mt-4 pt-3 border-t border-gray-150/50 space-y-2 text-left">
+                <p className="text-[10px] text-gray-500 leading-relaxed font-sans">
+                  💡 <strong>Nota Importante:</strong> Mais de 89% dos leitores relatam recuperar o valor do e-book inteiramente em sua primeira feira semanal aplicando as tabelas!
+                </p>
+                <p className="text-[9.5px] text-gray-400 leading-relaxed font-sans italic">
+                  * Os valores exibidos são <strong>apenas exemplos ilustrativos</strong> de quanto você pode economizar. A sua economia real dependerá diretamente dos seus gastos habituais, de outras idas a compras, do número de pessoas que vivem em sua casa, de quanto você gasta em uma ida típica ao supermercado e de quantos pedidos de delivery de comida você costuma solicitar. Esses valores também podem se alterar dependendo dos seus outros gastos pessoais do mês.
+                </p>
+              </div>
             </div>
                 {/* Meliuz Cashback Referral Integration Card */}
             <div className="mt-6 p-5 bg-rose-50/60 hover:bg-rose-50 border border-rose-100/80 rounded-[1.8rem] transition-all duration-300">
@@ -259,6 +264,13 @@ export const Pricing: React.FC = () => {
 
         </div>
 
+      </div>
+
+      {/* Dynamic curved wave leading into the global brand-dark Footer */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] transform translate-y-[1px] pointer-events-none z-10">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(120%+1.3px)] h-[35px] md:h-[50px] text-brand-dark fill-current">
+          <path d="M321.39,56.44c120,40,240,-40,360,-20c120,20,240,80,360,40c66,17.29,138.74-73.81,214.34-62.56V120H0V27.35A600.21,600.21,0,0,1,321.39,56.44Z"></path>
+        </svg>
       </div>
     </section>
   );

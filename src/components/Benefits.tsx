@@ -26,7 +26,10 @@ export const Benefits: React.FC = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white" id="beneficios">
+    <section className="relative py-20 md:py-32 bg-[radial-gradient(#0c694607_1.5px,transparent_1.5px)] [background-size:32px_32px] bg-white overflow-hidden" id="beneficios">
+      {/* Decorative side accent gradient to highlight section border */}
+      <div className="absolute top-1/4 left-0 w-32 h-96 bg-brand-primary/4 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-0 w-32 h-96 bg-brand-accent/4 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
@@ -104,6 +107,16 @@ export const Benefits: React.FC = () => {
           </a>
         </div>
 
+      </div>
+
+      {/* Unique section bottom element: elegant border line with floating heart icon */}
+      <div className="absolute bottom-0 inset-x-0 flex items-center justify-center translate-y-1/2 pointer-events-none z-10">
+        <div className="w-full border-t border-dashed border-emerald-500/10 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#f5fbf7] px-4 py-1.5 rounded-full border border-emerald-500/15 flex items-center gap-1.5 text-[#0c6946] text-[10px] font-black uppercase tracking-widest shadow-2xs">
+            <span>✨</span>
+            <span>Limites & Critérios de Compra</span>
+          </div>
+        </div>
       </div>
     </section>
   );

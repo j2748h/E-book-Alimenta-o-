@@ -147,10 +147,13 @@ export const WhatYouReceive: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#f6fbf8] border-b border-gray-100 relative overflow-hidden text-left" id="o-que-recebe">
+    <section className="relative py-24 md:py-32 bg-[repeating-linear-gradient(-45deg,#0c694603,#0c694603_15px,transparent_15px,transparent_30px)] bg-[#f6fbf8] overflow-hidden text-left" id="o-que-recebe">
       {/* Decorative premium glowing backgrounds */}
-      <div className="absolute top-10 right-0 w-[450px] h-[450px] bg-brand-primary/4 rounded-full blur-[130px] pointer-events-none"></div>
-      <div className="absolute bottom-10 left-0 w-[350px] h-[350px] bg-brand-accent/4 rounded-full blur-[110px] pointer-events-none"></div>
+      <div className="absolute top-10 right-0 w-[450px] h-[450px] bg-brand-primary/6 rounded-full blur-[130px] pointer-events-none"></div>
+      <div className="absolute bottom-10 left-0 w-[350px] h-[350px] bg-brand-accent/5 rounded-full blur-[110px] pointer-events-none"></div>
+      
+      {/* Postal box decorative border lines */}
+      <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-r from-red-500/10 via-brand-primary/10 to-red-500/10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -271,6 +274,16 @@ export const WhatYouReceive: React.FC = () => {
           </motion.div>
         </div>
 
+      </div>
+
+      {/* Dynamic separator dividing WhatYouReceive from Story */}
+      <div className="absolute bottom-0 inset-x-0 flex items-center justify-center translate-y-1/2 pointer-events-none z-10">
+        <div className="w-full border-t border-dashed border-emerald-500/10 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-1.5 rounded-full border border-emerald-500/15 flex items-center gap-1.5 text-[#0c6946] text-[10px] font-black uppercase tracking-widest shadow-2xs">
+            <span>💚</span>
+            <span>Uma História Real de Superação</span>
+          </div>
+        </div>
       </div>
     </section>
   );

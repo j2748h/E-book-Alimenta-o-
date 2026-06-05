@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 
 export const TargetAudience: React.FC = () => {
   return (
-    <section className="py-20 md:py-28 bg-[#f5fbf7] overflow-hidden border-t border-b border-brand-primary/5" id="para-quem">
+    <section className="relative py-20 md:py-28 bg-gradient-to-tr from-[#f0fcf5] via-white to-[#edf5f0] overflow-hidden border-b border-emerald-500/10" id="para-quem">
+      {/* Decorative luxury abstract lines */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header decoration */}

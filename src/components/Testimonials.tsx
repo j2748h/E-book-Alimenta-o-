@@ -50,8 +50,13 @@ export const Testimonials: React.FC = () => {
     setErrorMsg("");
   };
 
-  return (    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-[#f7faf8] to-white border-y border-gray-100 relative" id="depoimentos">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  return (
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-[#fffdf0] to-[#f0faf5] overflow-hidden" id="depoimentos">
+      {/* Golden trust stars background elements */}
+      <div className="absolute top-1/4 right-0 w-80 h-80 bg-amber-400/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-brand-primary/[0.04] rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
@@ -384,6 +389,15 @@ export const Testimonials: React.FC = () => {
         )}
       </AnimatePresence>
 
+      {/* Decorative dashed boundary pattern */}
+      <div className="absolute bottom-0 inset-x-0 flex items-center justify-center translate-y-1/2 pointer-events-none z-10">
+        <div className="w-full border-t border-dashed border-emerald-500/10 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#f6fbf8] px-4 py-1.5 rounded-full border border-emerald-500/15 flex items-center gap-1.5 text-brand-primary text-[10px] font-black uppercase tracking-widest shadow-2xs">
+            <span>🎁</span>
+            <span>Detalhes do Kit de Entrega</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

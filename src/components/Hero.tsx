@@ -18,11 +18,14 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#edf6f1] via-brand-cream/40 to-white pt-12 pb-16 md:pt-20 md:pb-28 border-b border-gray-100" id="hero">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#e3f0e8] via-brand-cream/30 to-white pt-12 pb-24 md:pt-20 md:pb-36" id="hero">
       {/* Luxurious glowing decorative elements */}
-      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-primary/8 rounded-full blur-[130px] pointer-events-none animate-pulse duration-[6s]"></div>
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-brand-accent/8 rounded-full blur-[110px] pointer-events-none"></div>
+      <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-primary/10 rounded-full blur-[130px] pointer-events-none animate-pulse duration-[6s]"></div>
+      <div className="absolute bottom-20 left-10 w-[400px] h-[400px] bg-brand-accent/8 rounded-full blur-[110px] pointer-events-none"></div>
       <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-brand-light/4 rounded-full blur-[90px] pointer-events-none"></div>
+      
+      {/* Decorative vertical grid lines for that premium editorial layout charm */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0c694605_1px,transparent_1px)] bg-[size:100px_100%] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -204,6 +207,13 @@ export const Hero: React.FC = () => {
           </motion.div>
 
         </div>
+      </div>
+
+      {/* Curved organic white wave bottom divider to create Section transition flow */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] transform translate-y-[1px] pointer-events-none z-10">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(130%+1.3px)] h-[40px] md:h-[60px] text-white fill-current">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c66,17.29,138.74-73.81,214.34-62.56V120H0V27.35A600.21,600.21,0,0,1,321.39,56.44Z"></path>
+        </svg>
       </div>
     </section>
   );

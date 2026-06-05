@@ -6,8 +6,12 @@ export const Story: React.FC = () => {
   const { triggerPurchase } = usePayment();
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white via-[#fafdfb] to-[#edf6f1] overflow-hidden" id="proposito">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-white via-[#fafdfb] to-[#edf6f1] overflow-hidden" id="proposito">
+      {/* Dynamic background memoir textures */}
+      <div className="absolute inset-0 bg-[#0c6946]/[0.01] bg-[radial-gradient(#0c694605_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-20 items-center">
           
@@ -168,6 +172,17 @@ export const Story: React.FC = () => {
 
         </div>
 
+      </div>
+
+      {/* Narrative styled dividing brand badge lines */}
+      <div className="absolute bottom-0 inset-x-0 flex items-center justify-center translate-y-1/2 pointer-events-none z-10 w-full">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="absolute bottom-0 left-0 w-full h-[30px] md:h-[45px] text-white fill-current translate-y-[1px]">
+          <path d="M0,40 C320,80 640,-20 960,40 C1120,60 1280,60 1440,20 L1440,60 L0,60 Z"></path>
+        </svg>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-5 py-2 rounded-full border border-emerald-500/15 flex items-center gap-1.5 text-[#0c6946] text-[10px] font-black uppercase tracking-widest shadow-2xs z-20">
+          <span>💰</span>
+          <span>Simulação de Poupança & Compra</span>
+        </div>
       </div>
     </section>
   );

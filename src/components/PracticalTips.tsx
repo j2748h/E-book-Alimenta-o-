@@ -46,8 +46,15 @@ const getTipBgClass = (id: string) => {
 
 export const PracticalTips: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-[#f2faf5] via-white to-white" id="habitos">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 md:py-32 bg-gradient-to-b from-[#e9f5ee] via-white to-white overflow-hidden" id="habitos">
+      {/* Decorative organic background graphics */}
+      <div className="absolute top-10 left-10 w-80 h-80 bg-emerald-500/5 rounded-full blur-[90px] pointer-events-none"></div>
+      <div className="absolute top-1/2 right-10 w-96 h-96 bg-brand-primary/5 rounded-full blur-[110px] pointer-events-none"></div>
+      
+      {/* Elegant visual separating lines on sides */}
+      <div className="absolute inset-y-0 right-10 md:right-24 w-px border-r border-dashed border-emerald-500/10 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
@@ -130,6 +137,16 @@ export const PracticalTips: React.FC = () => {
           </div>
         </div>
 
+      </div>
+
+      {/* Heart / Stars ambient dividing badge */}
+      <div className="absolute bottom-0 inset-x-0 flex items-center justify-center translate-y-1/2 pointer-events-none z-10">
+        <div className="w-full border-t border-dashed border-amber-500/10 relative">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-1.5 rounded-full border border-amber-500/15 flex items-center gap-1.5 text-[#ca8a04] text-[10px] font-black uppercase tracking-widest shadow-2xs">
+            <span>✨</span>
+            <span>Opinião de Quem Já Mudou</span>
+          </div>
+        </div>
       </div>
     </section>
   );
